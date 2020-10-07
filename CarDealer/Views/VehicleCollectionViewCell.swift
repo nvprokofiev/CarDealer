@@ -29,8 +29,8 @@ class VehicleCollectionViewCell: UICollectionViewCell {
         
     }
     
-    func set(_ vehicle: Vehicle) {
-        
+    func set(_ vehicle: VehicleViewModel) {
+        imageView.kf.setImage(with: vehicle.getImageURL(for: .medium))
     }
     
 }

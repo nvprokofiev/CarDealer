@@ -13,7 +13,7 @@ enum Section {
 
 class VehicleListViewController: UIViewController {
     
-    typealias DataSource = UICollectionViewDiffableDataSource<Section, String>
+    typealias DataSource = UICollectionViewDiffableDataSource<Section, Vehicle>
     typealias Snapshot = NSDiffableDataSourceSnapshot<Section, String>
 
     private lazy var collectionView = {
@@ -22,16 +22,15 @@ class VehicleListViewController: UIViewController {
     
     private var dataSource: DataSource!
     
-    private var model = ["1", "2", "3"]
+    private var vehicles: [Vehicle] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
         createDataSource()
         applySnapshot()
-        CarsClient().getAllCars{
-            print($0)
-        }
+        
+        fetchVehicles()
     }
     
     private func setupCollectionView() {
@@ -51,7 +50,7 @@ class VehicleListViewController: UIViewController {
     private func applySnapshot() {
         var snapshot: Snapshot = NSDiffableDataSourceSnapshot()
         snapshot.appendSections([.main])
-        snapshot.appendItems(model)
+        snapshot.appendItems(vehicles)
         dataSource.apply(snapshot)
     }
     
@@ -64,7 +63,20 @@ class VehicleListViewController: UIViewController {
         let section = NSCollectionLayoutSection(group: group)
         let layout = UICollectionViewCompositionalLayout(section: section)
         return layout
-
+    }
+    
+    private func fetchVehicles() {
+        CarsClient().getAllVehicles { [weak self] result in
+            guard let `self` = self else { return }
+            
+            switch result {
+            case .success(let listing):
+                self.vehicles = listing.listings
+                self.applySnapshot()
+            case .failure(let error):
+                print("error")
+            }
+        }
     }
 }
 

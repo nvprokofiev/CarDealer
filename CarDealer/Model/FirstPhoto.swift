@@ -7,6 +7,12 @@
 
 import Foundation
 
+enum FirstPhotoType: String {
+    case large
+    case medium
+    case small
+}
+
 struct FirstPhoto: Decodable {
     let large: String
     let medium: String

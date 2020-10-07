@@ -9,7 +9,7 @@ import Foundation
 
 class CarsClient: BaseAPIClient {
         
-    func getAllCars(_ completion: @escaping (Result<VehicleListings, APIError>) -> Void) {
+    func getAllVehicles(_ completion: @escaping (Result<VehicleListings, APIError>) -> Void) {
         let request = CarsAPI.all.request
                 
         fetch(with: request, decode: { json -> VehicleListings? in
