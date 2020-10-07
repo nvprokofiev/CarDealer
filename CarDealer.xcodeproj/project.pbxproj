@@ -74,15 +74,12 @@
 		67E91225252C0CF10068FC19 /* CarDealer */ = {
 			isa = PBXGroup;
 			children = (
+				67E91278252D6DC40068FC19 /* Services */,
+				67E91272252D6D550068FC19 /* App */,
 				67E9126C252D5AE10068FC19 /* Model */,
 				67E91259252D563A0068FC19 /* Extensions */,
-				67E91244252D53EC0068FC19 /* Networking */,
-				67E91226252C0CF10068FC19 /* AppDelegate.swift */,
-				67E91228252C0CF10068FC19 /* SceneDelegate.swift */,
-				67E9122A252C0CF10068FC19 /* CarListViewController.swift */,
-				67E9122F252C0CF60068FC19 /* Assets.xcassets */,
-				67E91231252C0CF60068FC19 /* LaunchScreen.storyboard */,
-				67E91234252C0CF60068FC19 /* Info.plist */,
+				67E91274252D6D6D0068FC19 /* ViewControllers */,
+				67E91277252D6DB90068FC19 /* Views */,
 			);
 			path = CarDealer;
 			sourceTree = "<group>";
@@ -132,6 +129,41 @@
 				67E9126D252D5AEB0068FC19 /* Vehicle.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		67E91272252D6D550068FC19 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				67E91226252C0CF10068FC19 /* AppDelegate.swift */,
+				67E91228252C0CF10068FC19 /* SceneDelegate.swift */,
+				67E9122F252C0CF60068FC19 /* Assets.xcassets */,
+				67E91231252C0CF60068FC19 /* LaunchScreen.storyboard */,
+				67E91234252C0CF60068FC19 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		67E91274252D6D6D0068FC19 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				67E9122A252C0CF10068FC19 /* CarListViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		67E91277252D6DB90068FC19 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		67E91278252D6DC40068FC19 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				67E91244252D53EC0068FC19 /* Networking */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -356,7 +388,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HQWWGBJ982;
-				INFOPLIST_FILE = CarDealer/Info.plist;
+				INFOPLIST_FILE = CarDealer/App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -376,7 +408,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HQWWGBJ982;
-				INFOPLIST_FILE = CarDealer/Info.plist;
+				INFOPLIST_FILE = CarDealer/App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
