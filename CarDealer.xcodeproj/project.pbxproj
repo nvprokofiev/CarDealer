@@ -12,6 +12,7 @@
 		670956A5252D70DF009A6C5E /* Dealer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670956A4252D70DF009A6C5E /* Dealer.swift */; };
 		670956A9252D7109009A6C5E /* VehicleListings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670956A8252D7109009A6C5E /* VehicleListings.swift */; };
 		670956B1252D7181009A6C5E /* VehicleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670956B0252D7181009A6C5E /* VehicleViewModel.swift */; };
+		670956B4252D814A009A6C5E /* DealerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670956B3252D814A009A6C5E /* DealerViewModel.swift */; };
 		67E91227252C0CF10068FC19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E91226252C0CF10068FC19 /* AppDelegate.swift */; };
 		67E91229252C0CF10068FC19 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E91228252C0CF10068FC19 /* SceneDelegate.swift */; };
 		67E9122B252C0CF10068FC19 /* VehicleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E9122A252C0CF10068FC19 /* VehicleListViewController.swift */; };
@@ -37,6 +38,7 @@
 		670956A4252D70DF009A6C5E /* Dealer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dealer.swift; sourceTree = "<group>"; };
 		670956A8252D7109009A6C5E /* VehicleListings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleListings.swift; sourceTree = "<group>"; };
 		670956B0252D7181009A6C5E /* VehicleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleViewModel.swift; sourceTree = "<group>"; };
+		670956B3252D814A009A6C5E /* DealerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealerViewModel.swift; sourceTree = "<group>"; };
 		67E91223252C0CF10068FC19 /* CarDealer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarDealer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67E91226252C0CF10068FC19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67E91228252C0CF10068FC19 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				670956B0252D7181009A6C5E /* VehicleViewModel.swift */,
+				670956B3252D814A009A6C5E /* DealerViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				670956A5252D70DF009A6C5E /* Dealer.swift in Sources */,
 				67E9126A252D58710068FC19 /* CarsClient.swift in Sources */,
 				67E9126E252D5AEB0068FC19 /* Vehicle.swift in Sources */,
+				670956B4252D814A009A6C5E /* DealerViewModel.swift in Sources */,
 				67E91253252D54EE0068FC19 /* APIClient.swift in Sources */,
 				67E91263252D573A0068FC19 /* URLRequest+Extensions.swift in Sources */,
 				67E91256252D55F60068FC19 /* BaseAPIClient.swift in Sources */,
