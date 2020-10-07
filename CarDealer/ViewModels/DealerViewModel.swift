@@ -17,4 +17,10 @@ class DealerViewModel {
     var address: String {
         return "\(dealer.city), \(dealer.state)"
     }
+    
+    
+    var phoneNumber: String {
+        dealer.phone.toPhoneFormat()
+    }
+    
 }

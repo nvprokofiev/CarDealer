@@ -23,40 +23,48 @@ class VehicleCollectionViewCell: UICollectionViewCell {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
         return imageView
     }()
     
     private lazy var titleLabel: UILabel = {
-       let label = UILabel()
+        let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.boldSystemFont(ofSize: 12)
         label.numberOfLines = 1
         label.textColor = UIColor.label
         label.minimumScaleFactor = 0.5
-
+        
         return label
     }()
     
     private lazy var detailLabel: UILabel = {
-       let label = UILabel()
+        let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.boldSystemFont(ofSize: 10)
+        label.font = UIFont.boldSystemFont(ofSize: 12)
         label.textColor = UIColor.secondaryLabel
         label.numberOfLines = 1
         label.minimumScaleFactor = 0.5
         return label
     }()
     
+    private lazy var phoneNumberButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitleColor(UIColor.systemBlue, for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 12)
+        return button
+    }()
+    
     private lazy var stackView: UIStackView = {
-       let stackView = UIStackView()
-        stackView.alignment = .leading
+        let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.addArrangedSubview(titleLabel)
         stackView.addArrangedSubview(detailLabel)
         return stackView
     }()
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubviews()
@@ -81,7 +89,6 @@ class VehicleCollectionViewCell: UICollectionViewCell {
             imageView.topAnchor.constraint(equalTo: containerView.topAnchor),
             imageView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
             imageView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
-            imageView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -45)
         ])
         
         containerView.addSubview(stackView)
@@ -89,14 +96,24 @@ class VehicleCollectionViewCell: UICollectionViewCell {
             stackView.topAnchor.constraint(equalTo: imageView.bottomAnchor),
             stackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 12),
             stackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -12),
-            stackView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -6)
+            stackView.heightAnchor.constraint(equalToConstant: 45)
+        ])
+        
+        containerView.addSubview(phoneNumberButton)
+        NSLayoutConstraint.activate([
+            phoneNumberButton.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 6),
+            phoneNumberButton.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 12),
+            phoneNumberButton.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -12),
+            phoneNumberButton.heightAnchor.constraint(equalToConstant: 30),
+            phoneNumberButton.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -6)
         ])
     }
-        
+    
     func set(_ vehicle: VehicleViewModel) {
         imageView.kf.setImage(with: vehicle.getImageURL(for: .medium))
         titleLabel.text = vehicle.title
         detailLabel.text = vehicle.details
+        phoneNumberButton.setTitle(vehicle.phoneNumber, for: .normal)
     }
     
 }

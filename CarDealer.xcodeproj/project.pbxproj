@@ -13,6 +13,7 @@
 		670956A9252D7109009A6C5E /* VehicleListings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670956A8252D7109009A6C5E /* VehicleListings.swift */; };
 		670956B1252D7181009A6C5E /* VehicleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670956B0252D7181009A6C5E /* VehicleViewModel.swift */; };
 		670956B4252D814A009A6C5E /* DealerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670956B3252D814A009A6C5E /* DealerViewModel.swift */; };
+		670956B7252D8D6E009A6C5E /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670956B6252D8D6E009A6C5E /* String+Extensions.swift */; };
 		67E91227252C0CF10068FC19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E91226252C0CF10068FC19 /* AppDelegate.swift */; };
 		67E91229252C0CF10068FC19 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E91228252C0CF10068FC19 /* SceneDelegate.swift */; };
 		67E9122B252C0CF10068FC19 /* VehicleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E9122A252C0CF10068FC19 /* VehicleListViewController.swift */; };
@@ -39,6 +40,7 @@
 		670956A8252D7109009A6C5E /* VehicleListings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleListings.swift; sourceTree = "<group>"; };
 		670956B0252D7181009A6C5E /* VehicleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleViewModel.swift; sourceTree = "<group>"; };
 		670956B3252D814A009A6C5E /* DealerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealerViewModel.swift; sourceTree = "<group>"; };
+		670956B6252D8D6E009A6C5E /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		67E91223252C0CF10068FC19 /* CarDealer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarDealer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67E91226252C0CF10068FC19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67E91228252C0CF10068FC19 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				67E9125A252D56530068FC19 /* Dictionary+Extensions.swift */,
 				67E9125E252D56930068FC19 /* CharacterSet+Extensions.swift */,
 				67E91262252D573A0068FC19 /* URLRequest+Extensions.swift */,
+				670956B6252D8D6E009A6C5E /* String+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				670956B7252D8D6E009A6C5E /* String+Extensions.swift in Sources */,
 				67E91266252D582D0068FC19 /* CarsAPI.swift in Sources */,
 				670956A1252D70C4009A6C5E /* FirstPhoto.swift in Sources */,
 				67E9125F252D56930068FC19 /* CharacterSet+Extensions.swift in Sources */,

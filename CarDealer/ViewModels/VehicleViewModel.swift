@@ -35,6 +35,10 @@ class VehicleViewModel {
         return "\(price) | \(vehicle.mileage)km | \(dealerVM.address)"
     }
     
+    var phoneNumber: String {
+        dealerVM.phoneNumber
+    }
+
     func getImageURL(for type: FirstPhotoType) -> URL? {
         guard let image = vehicle.image else {
             return nil
