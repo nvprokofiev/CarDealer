@@ -7,25 +7,6 @@
 
 import Foundation
 
-struct FirstPhoto: Decodable {
-    let large: String
-    let medium: String
-    let small: String
-}
-
-struct Dealer: Decodable {
-    let name: String
-    let address: String
-    let state: String
-    let zip: String
-    let city: String
-    let phone: String
-}
-
-struct VehicleListings: Decodable {
-    let listings: [Vehicle]
-}
-
 struct Vehicle: Decodable {
     
     let trim: String

@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1568679D13067436F7DDA3BB /* Pods_CarDealer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2DC444E0916139098930E9 /* Pods_CarDealer.framework */; };
+		670956A1252D70C4009A6C5E /* FirstPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670956A0252D70C4009A6C5E /* FirstPhoto.swift */; };
+		670956A5252D70DF009A6C5E /* Dealer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670956A4252D70DF009A6C5E /* Dealer.swift */; };
+		670956A9252D7109009A6C5E /* VehicleListings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670956A8252D7109009A6C5E /* VehicleListings.swift */; };
 		67E91227252C0CF10068FC19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E91226252C0CF10068FC19 /* AppDelegate.swift */; };
 		67E91229252C0CF10068FC19 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E91228252C0CF10068FC19 /* SceneDelegate.swift */; };
 		67E9122B252C0CF10068FC19 /* VehicleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E9122A252C0CF10068FC19 /* VehicleListViewController.swift */; };
@@ -26,6 +30,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		32B4F5DAE736A131912B4E85 /* Pods-CarDealer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarDealer.debug.xcconfig"; path = "Target Support Files/Pods-CarDealer/Pods-CarDealer.debug.xcconfig"; sourceTree = "<group>"; };
+		3C2DC444E0916139098930E9 /* Pods_CarDealer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarDealer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		670956A0252D70C4009A6C5E /* FirstPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPhoto.swift; sourceTree = "<group>"; };
+		670956A4252D70DF009A6C5E /* Dealer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dealer.swift; sourceTree = "<group>"; };
+		670956A8252D7109009A6C5E /* VehicleListings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleListings.swift; sourceTree = "<group>"; };
 		67E91223252C0CF10068FC19 /* CarDealer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarDealer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67E91226252C0CF10068FC19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67E91228252C0CF10068FC19 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +53,7 @@
 		67E91269252D58710068FC19 /* CarsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsClient.swift; sourceTree = "<group>"; };
 		67E9126D252D5AEB0068FC19 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
 		67E91279252D6E050068FC19 /* VehicleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleCollectionViewCell.swift; sourceTree = "<group>"; };
+		B550BFC4C3AB26D63E937F1D /* Pods-CarDealer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarDealer.release.xcconfig"; path = "Target Support Files/Pods-CarDealer/Pods-CarDealer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,17 +61,44 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1568679D13067436F7DDA3BB /* Pods_CarDealer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		411C5E989B4147B63FB25AF1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C2DC444E0916139098930E9 /* Pods_CarDealer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6183C9FC3C45D30CCC39C888 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				32B4F5DAE736A131912B4E85 /* Pods-CarDealer.debug.xcconfig */,
+				B550BFC4C3AB26D63E937F1D /* Pods-CarDealer.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6709569F252D70B0009A6C5E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		67E9121A252C0CF10068FC19 = {
 			isa = PBXGroup;
 			children = (
 				67E91225252C0CF10068FC19 /* CarDealer */,
 				67E91224252C0CF10068FC19 /* Products */,
+				6183C9FC3C45D30CCC39C888 /* Pods */,
+				411C5E989B4147B63FB25AF1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +116,7 @@
 				67E91278252D6DC40068FC19 /* Services */,
 				67E91272252D6D550068FC19 /* App */,
 				67E9126C252D5AE10068FC19 /* Model */,
+				6709569F252D70B0009A6C5E /* ViewModels */,
 				67E91259252D563A0068FC19 /* Extensions */,
 				67E91274252D6D6D0068FC19 /* ViewControllers */,
 				67E91277252D6DB90068FC19 /* Views */,
@@ -129,6 +167,9 @@
 			isa = PBXGroup;
 			children = (
 				67E9126D252D5AEB0068FC19 /* Vehicle.swift */,
+				670956A0252D70C4009A6C5E /* FirstPhoto.swift */,
+				670956A4252D70DF009A6C5E /* Dealer.swift */,
+				670956A8252D7109009A6C5E /* VehicleListings.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -176,9 +217,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 67E91237252C0CF60068FC19 /* Build configuration list for PBXNativeTarget "CarDealer" */;
 			buildPhases = (
+				8013D483F7F85432B82AADF7 /* [CP] Check Pods Manifest.lock */,
 				67E9121F252C0CF10068FC19 /* Sources */,
 				67E91220252C0CF10068FC19 /* Frameworks */,
 				67E91221252C0CF10068FC19 /* Resources */,
+				36ED28AEA81CA12CE622D185 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -233,14 +276,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		36ED28AEA81CA12CE622D185 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CarDealer/Pods-CarDealer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CarDealer/Pods-CarDealer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CarDealer/Pods-CarDealer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8013D483F7F85432B82AADF7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CarDealer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		67E9121F252C0CF10068FC19 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				67E91266252D582D0068FC19 /* CarsAPI.swift in Sources */,
+				670956A1252D70C4009A6C5E /* FirstPhoto.swift in Sources */,
 				67E9125F252D56930068FC19 /* CharacterSet+Extensions.swift in Sources */,
 				67E9122B252C0CF10068FC19 /* VehicleListViewController.swift in Sources */,
+				670956A9252D7109009A6C5E /* VehicleListings.swift in Sources */,
+				670956A5252D70DF009A6C5E /* Dealer.swift in Sources */,
 				67E9126A252D58710068FC19 /* CarsClient.swift in Sources */,
 				67E9126E252D5AEB0068FC19 /* Vehicle.swift in Sources */,
 				67E91253252D54EE0068FC19 /* APIClient.swift in Sources */,
@@ -387,6 +475,7 @@
 		};
 		67E91238252C0CF60068FC19 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32B4F5DAE736A131912B4E85 /* Pods-CarDealer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -407,6 +496,7 @@
 		};
 		67E91239252C0CF60068FC19 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B550BFC4C3AB26D63E937F1D /* Pods-CarDealer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
