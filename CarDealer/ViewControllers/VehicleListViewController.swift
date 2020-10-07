@@ -26,11 +26,17 @@ class VehicleListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureNavigationController()
         setupCollectionView()
         createDataSource()
         applySnapshot()
         
         fetchVehicles()
+    }
+    
+    private func configureNavigationController() {
+        navigationItem.title = "Latest Cars"
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     private func setupCollectionView() {
