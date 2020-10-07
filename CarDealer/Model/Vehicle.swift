@@ -9,6 +9,7 @@ import Foundation
 
 struct Vehicle: Decodable {
     
+    let id: String
     let trim: String
     let model: String
     let year: Int
@@ -19,6 +20,7 @@ struct Vehicle: Decodable {
     let dealer: Dealer
     
     enum CodingKeys: String, CodingKey {
+        case id
         case trim
         case model
         case year
@@ -40,9 +42,20 @@ struct Vehicle: Decodable {
         model = try container.decode(String.self, forKey: .model)
         year = try container.decode(Int.self, forKey: .year)
         make = try container.decode(String.self, forKey: .make)
+        id = try container.decode(String.self, forKey: .id)
         price = try container.decode(Double.self, forKey: .price)
         mileage = try container.decode(Int.self, forKey: .mileage)
         dealer = try container.decode(Dealer.self, forKey: .dealer)
         image = try? imageContainer.decode(FirstPhoto.self, forKey: .firstPhoto)
+    }
+}
+
+extension Vehicle: Hashable {
+    static func == (lhs: Vehicle, rhs: Vehicle) -> Bool {
+        lhs.id == rhs.id
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
     }
 }
