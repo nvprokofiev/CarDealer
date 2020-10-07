@@ -11,7 +11,7 @@ enum Section {
     case main
 }
 
-class CarListViewController: UIViewController {
+class VehicleListViewController: UIViewController {
     
     typealias DataSource = UICollectionViewDiffableDataSource<Section, String>
     typealias Snapshot = NSDiffableDataSourceSnapshot<Section, String>

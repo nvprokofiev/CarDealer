@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		67E91227252C0CF10068FC19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E91226252C0CF10068FC19 /* AppDelegate.swift */; };
 		67E91229252C0CF10068FC19 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E91228252C0CF10068FC19 /* SceneDelegate.swift */; };
-		67E9122B252C0CF10068FC19 /* CarListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E9122A252C0CF10068FC19 /* CarListViewController.swift */; };
+		67E9122B252C0CF10068FC19 /* VehicleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E9122A252C0CF10068FC19 /* VehicleListViewController.swift */; };
 		67E91230252C0CF60068FC19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67E9122F252C0CF60068FC19 /* Assets.xcassets */; };
 		67E91233252C0CF60068FC19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67E91231252C0CF60068FC19 /* LaunchScreen.storyboard */; };
 		67E9124C252D54780068FC19 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E9124B252D54780068FC19 /* Endpoint.swift */; };
@@ -22,13 +22,14 @@
 		67E91266252D582D0068FC19 /* CarsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E91265252D582D0068FC19 /* CarsAPI.swift */; };
 		67E9126A252D58710068FC19 /* CarsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E91269252D58710068FC19 /* CarsClient.swift */; };
 		67E9126E252D5AEB0068FC19 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E9126D252D5AEB0068FC19 /* Vehicle.swift */; };
+		67E9127A252D6E050068FC19 /* VehicleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E91279252D6E050068FC19 /* VehicleCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		67E91223252C0CF10068FC19 /* CarDealer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarDealer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67E91226252C0CF10068FC19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67E91228252C0CF10068FC19 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		67E9122A252C0CF10068FC19 /* CarListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListViewController.swift; sourceTree = "<group>"; };
+		67E9122A252C0CF10068FC19 /* VehicleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleListViewController.swift; sourceTree = "<group>"; };
 		67E9122F252C0CF60068FC19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		67E91232252C0CF60068FC19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		67E91234252C0CF60068FC19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -42,6 +43,7 @@
 		67E91265252D582D0068FC19 /* CarsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsAPI.swift; sourceTree = "<group>"; };
 		67E91269252D58710068FC19 /* CarsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsClient.swift; sourceTree = "<group>"; };
 		67E9126D252D5AEB0068FC19 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
+		67E91279252D6E050068FC19 /* VehicleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,7 +148,7 @@
 		67E91274252D6D6D0068FC19 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				67E9122A252C0CF10068FC19 /* CarListViewController.swift */,
+				67E9122A252C0CF10068FC19 /* VehicleListViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -154,6 +156,7 @@
 		67E91277252D6DB90068FC19 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				67E91279252D6E050068FC19 /* VehicleCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -237,13 +240,14 @@
 			files = (
 				67E91266252D582D0068FC19 /* CarsAPI.swift in Sources */,
 				67E9125F252D56930068FC19 /* CharacterSet+Extensions.swift in Sources */,
-				67E9122B252C0CF10068FC19 /* CarListViewController.swift in Sources */,
+				67E9122B252C0CF10068FC19 /* VehicleListViewController.swift in Sources */,
 				67E9126A252D58710068FC19 /* CarsClient.swift in Sources */,
 				67E9126E252D5AEB0068FC19 /* Vehicle.swift in Sources */,
 				67E91253252D54EE0068FC19 /* APIClient.swift in Sources */,
 				67E91263252D573A0068FC19 /* URLRequest+Extensions.swift in Sources */,
 				67E91256252D55F60068FC19 /* BaseAPIClient.swift in Sources */,
 				67E91227252C0CF10068FC19 /* AppDelegate.swift in Sources */,
+				67E9127A252D6E050068FC19 /* VehicleCollectionViewCell.swift in Sources */,
 				67E91229252C0CF10068FC19 /* SceneDelegate.swift in Sources */,
 				67E9124C252D54780068FC19 /* Endpoint.swift in Sources */,
 				67E91250252D54C80068FC19 /* APIError.swift in Sources */,
