@@ -54,4 +54,8 @@ class VehicleViewModel {
         return nil
     }
     
+    var phoneURL: URL? {
+        dealerVM.phoneURL
+    }
+    
 }

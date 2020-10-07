@@ -8,6 +8,10 @@
 import UIKit
 import Kingfisher
 
+protocol VehicleCollectionViewCellDelegate: class {
+    func didTapDialButton(to url: URL)
+}
+
 class VehicleCollectionViewCell: UICollectionViewCell {
     
     private lazy var containerView: UIView = {
@@ -66,13 +70,13 @@ class VehicleCollectionViewCell: UICollectionViewCell {
         return stackView
     }()
     
-    var onPhoneButtonTapped: (()->())?
-
+    weak var delegate: VehicleCollectionViewCellDelegate?
+    private var phoneURL: URL?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubviews()
     }
-    
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -118,10 +122,13 @@ class VehicleCollectionViewCell: UICollectionViewCell {
         titleLabel.text = vehicle.title
         detailLabel.text = vehicle.details
         phoneNumberButton.setTitle(vehicle.phoneNumber, for: .normal)
+        phoneURL = vehicle.phoneURL
     }
     
     @objc private func didTapPhoneButton() {
-        onPhoneButtonTapped?()
+        
+        guard let phoneURL = phoneURL else { return }
+        
+        delegate?.didTapDialButton(to: phoneURL)
     }
-    
 }

@@ -23,4 +23,7 @@ class DealerViewModel {
         dealer.phone.toPhoneFormat()
     }
     
+    var phoneURL: URL? {
+        URL(string: "tel://\(dealer.phone)")
+    }
 }
