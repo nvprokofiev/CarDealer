@@ -45,28 +45,7 @@ extension Endpoint {
         var components = URLComponents()
         components.scheme = scheme
         components.host = host
-        
-        var queryItems = [URLQueryItem]()
-        
-        switch parameterEncoding {
-        case .defaultEncoding:
-            if let params = params, method == .get {
-                queryItems.append(contentsOf: params.map {
-                    return URLQueryItem(name: "\($0)", value: "\($1)")
-                })
-            }
-        case .compositeEncoding:
-            if let params = params,
-                let queryParams = params["query"] as? [String: Any] {
-                queryItems.append(contentsOf: queryParams.map {
-                    return URLQueryItem(name: "\($0)", value: "\($1)")
-                })
-            }
-        case .jsonEncoding:
-            break
-        }
-        
-        components.queryItems = queryItems
+        components.path = path
         
         return components
     }

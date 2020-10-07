@@ -13,5 +13,5 @@ enum CarsAPI {
 
 extension CarsAPI: Endpoint {
     
-    var path: String { "assignment.json" }
+    var path: String { "/assignment.json" }
 }

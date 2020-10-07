@@ -22,8 +22,10 @@ extension APIClient {
                                  decode: @escaping (Decodable) -> T?,
                                  completion: @escaping (Result<T, APIError>) -> Void) {
             let task = decodingTask(with: request, decodingType: T.self) { (json, error) in
+                
                 DispatchQueue.main.async {
                     guard let json = json else {
+                        
                         if let error = error {
                             completion(Result.failure(error))
                         } else {
@@ -60,16 +62,18 @@ extension APIClient {
                 if let data = data {
                     do {
                         let decoder = JSONDecoder()
-                        decoder.keyDecodingStrategy = .convertFromSnakeCase
                         let genericModel = try decoder.decode(decodingType, from: data)
                         completion?(genericModel, nil)
-                    } catch {
+                    } catch (let error) {
+                        print(error)
                         completion?(nil, .requestFailed)
                     }
                 } else {
+                    
                     completion?(nil, .invalidData)
                 }
             } else {
+                
                 completion?(nil, APIError(response: httpResponse))
             }
         }
