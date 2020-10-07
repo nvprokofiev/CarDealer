@@ -13,8 +13,6 @@ protocol Endpoint {
     var params: [String: Any]? { get }
     var parameterEncoding: ParameterEnconding { get }
     var method: HTTPMethod { get }
-    
-    var endpointStringRepresentation: String { get }
 }
 
 //MARK:- Default overriding
@@ -39,19 +37,16 @@ extension Endpoint {
 
 //MARK: - Endpoint implementation
 extension Endpoint {
-    
+
     private var scheme: String { return "https" }
-    private var host: String { return "api.themoviedb.org" }
-    private var apiKey: String { return "70747d1830c7419bec0af8ae24ad86ff" }
-    private var version: String { return "3" }
+    private var host: String { return "carfax-for-consumers.firebaseio.com" }
     
     private var urlComponents: URLComponents {
         var components = URLComponents()
         components.scheme = scheme
         components.host = host
-        components.path = "/\(version)\(path)"
         
-        var queryItems = [URLQueryItem(name: "api_key", value: apiKey)]
+        var queryItems = [URLQueryItem]()
         
         switch parameterEncoding {
         case .defaultEncoding:

@@ -29,6 +29,9 @@ class CarListViewController: UIViewController {
         setupCollectionView()
         createDataSource()
         applySnapshot()
+        CarsClient().getAllCars{
+            print($0)
+        }
     }
     
     private func setupCollectionView() {

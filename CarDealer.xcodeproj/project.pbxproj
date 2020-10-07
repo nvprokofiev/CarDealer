@@ -19,6 +19,8 @@
 		67E9125B252D56530068FC19 /* Dictionary+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E9125A252D56530068FC19 /* Dictionary+Extensions.swift */; };
 		67E9125F252D56930068FC19 /* CharacterSet+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E9125E252D56930068FC19 /* CharacterSet+Extensions.swift */; };
 		67E91263252D573A0068FC19 /* URLRequest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E91262252D573A0068FC19 /* URLRequest+Extensions.swift */; };
+		67E91266252D582D0068FC19 /* CarsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E91265252D582D0068FC19 /* CarsAPI.swift */; };
+		67E9126A252D58710068FC19 /* CarsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E91269252D58710068FC19 /* CarsClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		67E9125A252D56530068FC19 /* Dictionary+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extensions.swift"; sourceTree = "<group>"; };
 		67E9125E252D56930068FC19 /* CharacterSet+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CharacterSet+Extensions.swift"; sourceTree = "<group>"; };
 		67E91262252D573A0068FC19 /* URLRequest+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Extensions.swift"; sourceTree = "<group>"; };
+		67E91265252D582D0068FC19 /* CarsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsAPI.swift; sourceTree = "<group>"; };
+		67E91269252D58710068FC19 /* CarsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +96,8 @@
 		67E91245252D53FC0068FC19 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				67E91265252D582D0068FC19 /* CarsAPI.swift */,
+				67E91269252D58710068FC19 /* CarsClient.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -186,8 +192,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67E91266252D582D0068FC19 /* CarsAPI.swift in Sources */,
 				67E9125F252D56930068FC19 /* CharacterSet+Extensions.swift in Sources */,
 				67E9122B252C0CF10068FC19 /* CarListViewController.swift in Sources */,
+				67E9126A252D58710068FC19 /* CarsClient.swift in Sources */,
 				67E91253252D54EE0068FC19 /* APIClient.swift in Sources */,
 				67E91263252D573A0068FC19 /* URLRequest+Extensions.swift in Sources */,
 				67E91256252D55F60068FC19 /* BaseAPIClient.swift in Sources */,
