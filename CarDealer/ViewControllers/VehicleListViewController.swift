@@ -14,7 +14,7 @@ enum Section {
 class VehicleListViewController: UIViewController {
     
     typealias DataSource = UICollectionViewDiffableDataSource<Section, Vehicle>
-    typealias Snapshot = NSDiffableDataSourceSnapshot<Section, String>
+    typealias Snapshot = NSDiffableDataSourceSnapshot<Section, Vehicle>
 
     private lazy var collectionView = {
         UICollectionView(frame: view.frame, collectionViewLayout: createLayout())
@@ -36,13 +36,16 @@ class VehicleListViewController: UIViewController {
     private func setupCollectionView() {
         view.addSubview(collectionView)
         collectionView.backgroundColor = .white
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        collectionView.register(VehicleCollectionViewCell.self, forCellWithReuseIdentifier: String(describing: VehicleCollectionViewCell.self))
     }
     
     private func createDataSource() {
-        dataSource = UICollectionViewDiffableDataSource(collectionView: collectionView, cellProvider: { (collectionView, indexPath, model) -> UICollectionViewCell? in
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as UICollectionViewCell
-            cell.backgroundColor = UIColor.green
+        dataSource = UICollectionViewDiffableDataSource(collectionView: collectionView, cellProvider: { (collectionView, indexPath, vehicle) -> UICollectionViewCell? in
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: VehicleCollectionViewCell.self), for: indexPath) as? VehicleCollectionViewCell else {
+                return UICollectionViewCell()
+            }
+            let vehicleVM = VehicleViewModel(with: vehicle)
+            cell.set(vehicleVM)
             return cell
         })
     }
