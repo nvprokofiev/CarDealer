@@ -53,6 +53,7 @@ class VehicleCollectionViewCell: UICollectionViewCell {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitleColor(UIColor.systemBlue, for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 12)
+        button.addTarget(self, action: #selector(didTapPhoneButton), for: .touchUpInside)
         return button
     }()
     
@@ -64,11 +65,14 @@ class VehicleCollectionViewCell: UICollectionViewCell {
         stackView.addArrangedSubview(detailLabel)
         return stackView
     }()
+    
+    var onPhoneButtonTapped: (()->())?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubviews()
     }
+    
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -114,6 +118,10 @@ class VehicleCollectionViewCell: UICollectionViewCell {
         titleLabel.text = vehicle.title
         detailLabel.text = vehicle.details
         phoneNumberButton.setTitle(vehicle.phoneNumber, for: .normal)
+    }
+    
+    @objc private func didTapPhoneButton() {
+        onPhoneButtonTapped?()
     }
     
 }
